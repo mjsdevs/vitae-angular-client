@@ -1,4 +1,9 @@
-# VitaeAngularClient
+<p align="center">
+  <img width="350px" src="https://raw.githubusercontent.com/jrmmendes/vitae-angular-client/main/docs/logo-vittae-colored.svg" alt="Vitae">
+</p>
+<h4 align="center"> Create amazing developer resumes. </h4>
+
+----
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
 

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jrmmendes/vitae-angular-client/main/docs/logo-vittae-colored.svg" alt="Vitae">
+  <img width="350px" src="https://raw.githubusercontent.com/jrmmendes/vitae-angular-client/main/docs/logo-vittae-colored.svg" alt="Vitae">
 </p>
 <p align="center"> Create amazing developer resumes. </p>
 

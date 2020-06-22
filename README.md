@@ -4,6 +4,8 @@
 <h4 align="center"> Create amazing developer resumes. </h4>
 
 ----
+### Resources
+- [Figma Prototypes](https://www.figma.com/file/QLXtiIDrgbkkUgAfbqKMca/Vitae-Resume-Generator?node-id=0%3A1)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
 

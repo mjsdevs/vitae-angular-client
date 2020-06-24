@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  template: `
+    <app-password-field></app-password-field>
+    <app-email-field></app-email-field>
+  `
 })
 export class AppComponent {
   title = 'vitae-angular-client';

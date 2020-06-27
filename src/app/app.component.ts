@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   styleUrls: ['./app.component.scss'],
   template: `
-    <app-password-field></app-password-field>
-    <app-email-field></app-email-field>
+    <app-login-form></app-login-form>
   `
 })
 export class AppComponent {

@@ -1,19 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from './modules/forms/forms.module';
 
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './components/button/button.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonComponent,
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

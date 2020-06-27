@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'vitae-button',
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  selector: 'app-button',
+  styleUrls: ['./button.component.scss'],
+  template: `
+  <button class="app-button">
+    <ng-content></ng-content>
+  </button>
+  `
 })
 export class ButtonComponent implements OnInit {
 

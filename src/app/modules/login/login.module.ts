@@ -1,35 +1,22 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '@shared/shared.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import {
-  PasswordFieldComponent,
-  EmailFieldComponent,
-  LoginFormComponent,
-} from './components';
-
-import {
-  LoginPageComponent,
-} from './pages';
+import { PasswordFieldComponent } from './password-field/password-field.component';
+import { EmailFieldComponent } from './email-field/email-field.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    FontAwesomeModule,
-  ],
   declarations: [
     PasswordFieldComponent,
     EmailFieldComponent,
-    LoginPageComponent,
-    LoginFormComponent,
   ],
   exports: [
     PasswordFieldComponent,
     EmailFieldComponent,
-    LoginPageComponent,
-    LoginFormComponent,
   ],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+  ]
 })
 export class LoginModule { }

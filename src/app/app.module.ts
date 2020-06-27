@@ -1,12 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from './modules/forms/forms.module';
+import { LoginModule } from '@modules/login';
+import { SharedModule } from '@shared/shared.module';
 
 import { AppComponent } from './app.component';
-import { SharedModule } from '@shared/shared.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,8 +15,7 @@ import { SharedModule } from '@shared/shared.module';
     SharedModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    FontAwesomeModule,
+    LoginModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

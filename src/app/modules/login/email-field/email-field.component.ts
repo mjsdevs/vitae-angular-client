@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, HostBinding, HostListener } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,13 +8,12 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
   <div class="icon"> <fa-icon [icon]="faUser"></fa-icon> </div>
   <input
     class="field-input"
-    type="text"
+    type="email"
     (focus)="toggleFocus()"
     (blur)="toggleFocus()"
-    formControlName="username"
     placeholder="Email"
   />
-  `
+  `,
 })
 export class EmailFieldComponent implements OnInit {
 

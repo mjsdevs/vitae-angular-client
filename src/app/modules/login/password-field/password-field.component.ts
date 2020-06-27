@@ -11,7 +11,6 @@ import { faKey, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
     [type]="isPasswordVisible ? 'text' : 'password'"
     (focus)="toggleFocus()"
     (blur)="toggleFocus()"
-    formControlName="username"
     placeholder="Password"
   />
   <button class='visibility-btn' (click)="toggleVisibility()">

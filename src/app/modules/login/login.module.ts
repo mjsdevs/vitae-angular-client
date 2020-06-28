@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ReactiveFormsModule } from '@angular/forms'
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { SharedModule } from '@shared/shared.module';
 
@@ -24,6 +26,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
     LoginPageComponent,
   ],
   imports: [
+    HttpClientModule,
     CommonModule,
     ReactiveFormsModule,
     FontAwesomeModule,

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent } from './button/button.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -10,13 +9,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule,
   ],
   declarations: [
-    ButtonComponent,
   ],
   exports:[
     CommonModule,
     FontAwesomeModule,
     FormsModule,
-    ButtonComponent,
   ]
 })
 export class SharedModule { }

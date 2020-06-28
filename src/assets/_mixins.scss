@@ -1,6 +1,0 @@
-@mixin default-transition($duration: 200ms) {
-  transition: all $duration ease-in-out;
-  &:hover {
-    transition: all $duration ease-in-out;
-  }
-}

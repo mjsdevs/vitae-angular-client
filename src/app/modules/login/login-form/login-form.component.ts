@@ -11,7 +11,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
         <app-password-field></app-password-field>
       </fieldset>
       <div class="row">
-        <app-button> Sign Up </app-button>
+        <button class="app-button">
+          Sign Up
+        </button>
       </div>
     </form>
   `,

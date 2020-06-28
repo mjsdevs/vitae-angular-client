@@ -13,7 +13,7 @@ import { faKey, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
     (blur)="toggleFocus()"
     placeholder="Password"
   />
-  <button class='visibility-btn' (click)="toggleVisibility()">
+  <button class='visibility-btn' type='button' (click)="toggleVisibility()">
     <fa-icon [icon]='isPasswordVisible ? faEyeSlash : faEye'>
     </fa-icon>
   </button>

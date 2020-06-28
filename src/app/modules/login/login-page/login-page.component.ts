@@ -4,6 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-login-page',
   template: `
     <section class="form-area">
+      <img class="logo" src="assets/logo-vittae-colored.svg">
+      <h1 class="phrase"> Create amazing developer resumes! </h1>
       <app-login-form class="login-form"></app-login-form>
     </section>
 

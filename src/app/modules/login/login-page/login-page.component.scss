@@ -1,5 +1,6 @@
 :host {
   display: flex;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
@@ -8,14 +9,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  flex-direction: column;
+  min-width: 30rem;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    min-width: 100%;
+  }
 
   .login-form {
     width: 90%;
   }
+
+  .logo {
+    width: 12rem;
+  }
+
+  .phrase {
+    font-size: 1em;
+  }
 }
 
 .banner {
-  width: 70%;
-  background-color: #482EA0;
+  width: 100%;
+  background: url('../../../../assets/image-login.jpg') center/cover;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 }

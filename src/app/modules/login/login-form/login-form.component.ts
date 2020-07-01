@@ -43,7 +43,6 @@ export class LoginFormComponent implements OnInit {
   }
 
   toggleFocus(fieldRef: Element) {
-    console.log(fieldRef);
     fieldRef
       .classList
       .toggle('is-focused');
@@ -52,7 +51,6 @@ export class LoginFormComponent implements OnInit {
   togglePasswordVisibility(): void {
     this.isPasswordVisible = !this.isPasswordVisible;
   }
-
 
   onSubmit() {
     this.submitted = true;

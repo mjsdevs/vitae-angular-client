@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <section class="form-area">
       <img class="logo" src="assets/logo-vittae-colored.svg">
       <h1 class="phrase"> Create amazing developer resumes! </h1>
-      <app-login-form class="login-form"></app-login-form>
+      <login-form class="login-form"></login-form>
     </section>
 
     <section class="banner">

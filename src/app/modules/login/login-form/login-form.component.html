@@ -1,0 +1,35 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <fieldset class="fields">
+    <div class="field" #emailField>
+      <div class="icon"> <fa-icon [icon]="faUser"></fa-icon> </div>
+      <input
+        class="field-input"
+        type="email"
+        (focus)="toggleFocus(emailField)"
+        (blur)="toggleFocus(emailField)"
+        placeholder="Email"/>
+    </div>
+
+    <div class="field" #passwordField>
+      <div class="icon"> <fa-icon [icon]="faKey"></fa-icon> </div>
+      <input
+        class="field-input"
+        [type]="isPasswordVisible ? 'text' : 'password'"
+        (focus)="toggleFocus(passwordField)"
+        (blur)="toggleFocus(passwordField)"
+        placeholder="Password" />
+      <button class='visibility-btn' type='button' (click)="togglePasswordVisibility()">
+        <fa-icon [icon]='isPasswordVisible ? faEyeSlash : faEye'>
+        </fa-icon>
+      </button>
+    </div>
+  </fieldset>
+  <div class="row">
+    <button class="forgot-password">
+      Forgot password?
+    </button>
+    <button class="app-button">
+      Sign Up
+    </button>
+  </div>
+</form>

@@ -1,33 +1,38 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
+
+import {
+  faUser,
+  faKey,
+  faEye,
+  faEyeSlash,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-login-form',
+  selector: 'login-form',
   styleUrls: ['./login-form.component.scss'],
-  template: `
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <fieldset class="fields">
-        <app-email-field></app-email-field>
-        <app-password-field></app-password-field>
-      </fieldset>
-      <div class="row">
-        <button class="forgot-password">
-          Forgot password?
-        </button>
-        <button class="app-button">
-          Sign Up
-        </button>
-      </div>
-    </form>
-  `,
+  templateUrl: './login-form.component.html',
 })
 export class LoginFormComponent implements OnInit {
   form: FormGroup;
   loading = false;
   submitted = false;
 
+  faUser = faUser;
+  faKey = faKey;
+  faEye = faEye;
+  faEyeSlash = faEyeSlash;
+
+  isFocused = false;
+  isPasswordVisible = false;
+
   constructor(
     private formBuilder: FormBuilder,
+    private elRef: ElementRef,
   ) { }
 
   ngOnInit(): void {
@@ -37,8 +42,17 @@ export class LoginFormComponent implements OnInit {
     });
   }
 
-  // convenience getter for easy access to form fields
-  get f() { return this.form.controls; }
+  toggleFocus(fieldRef: Element) {
+    console.log(fieldRef);
+    fieldRef
+      .classList
+      .toggle('is-focused');
+  }
+
+  togglePasswordVisibility(): void {
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
+
 
   onSubmit() {
     this.submitted = true;

@@ -3,6 +3,7 @@ $focus-color: #A832F8;
 $invalid-color: #D70022;
 
 .field {
+  outline-style: none;
   transition: all 200ms ease-out;
   position: relative;
   display: inline-flex;

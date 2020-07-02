@@ -14,6 +14,7 @@ $invalid-color: #D70022;
   &.is-invalid {
     border-color: $invalid-color;
     .icon { color: $invalid-color }
+    box-shadow: 0 0 0.3em $invalid-color;
   }
 
   &.is-focused {
@@ -54,6 +55,12 @@ $invalid-color: #D70022;
   width: 48%;
   margin-left: auto;
   margin-right: 1em;
+
+  &[disabled] {
+    background: gray;
+    box-shadow: none;
+    cursor: default;
+  }
 }
 
 .forgot-password {

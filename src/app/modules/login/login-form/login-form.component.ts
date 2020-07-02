@@ -1,8 +1,8 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import {
-  FormBuilder,
   FormGroup,
   Validators,
+  FormControl,
 } from '@angular/forms';
 
 import {
@@ -19,6 +19,9 @@ import {
 })
 export class LoginFormComponent implements OnInit {
   form: FormGroup;
+  emailControl: FormControl;
+  passwordControl: FormControl;
+
   loading = false;
   submitted = false;
 
@@ -30,22 +33,36 @@ export class LoginFormComponent implements OnInit {
   isFocused = false;
   isPasswordVisible = false;
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private elRef: ElementRef,
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required]
+    this.emailControl = new FormControl('', [
+      Validators.email,
+      Validators.required,
+    ]);
+
+    this.passwordControl = new FormControl('', [
+      Validators.required,
+    ]);
+
+    this.form = new FormGroup({
+      email: this.emailControl,
+      password: this.passwordControl,
     });
+  }
+
+  get isEmailValid() {
+    return this.emailControl.valid || this.emailControl.untouched;
+  }
+
+  get isPasswordValid() {
+    return this.passwordControl.valid || this.passwordControl.untouched;
   }
 
   toggleFocus(fieldRef: Element) {
     fieldRef
-      .classList
-      .toggle('is-focused');
+    .classList
+    .toggle('is-focused');
   }
 
   togglePasswordVisibility(): void {
@@ -54,9 +71,5 @@ export class LoginFormComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-
-    if (this.form.invalid) {
-      return;
-    }
   }
 }

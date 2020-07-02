@@ -12,6 +12,9 @@ import {
   faEyeSlash,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { UserService } from '../user.service';
+import {first} from 'rxjs/operators';
+
 @Component({
   selector: 'login-form',
   styleUrls: ['./login-form.component.scss'],
@@ -33,7 +36,7 @@ export class LoginFormComponent implements OnInit {
   isFocused = false;
   isPasswordVisible = false;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     this.emailControl = new FormControl('', [
@@ -49,6 +52,10 @@ export class LoginFormComponent implements OnInit {
       email: this.emailControl,
       password: this.passwordControl,
     });
+  }
+
+  get credentials() {
+    return this.form.value;
   }
 
   get isEmailValid() {
@@ -71,5 +78,21 @@ export class LoginFormComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
+    if (this.form.valid) {
+      this.userService.login(
+        this.credentials.email,
+        this.credentials.password,
+      ).pipe(first())
+      .subscribe(
+        () => {
+          console.log(JSON.parse(localStorage.getItem('currentUser')));
+        },
+        error => {
+          if (error.status === 400) {
+            console.log('Wrong credentials');
+          }
+        }
+      )
+    }
   }
 }

@@ -20,7 +20,7 @@ export class UserService {
     }).pipe(map(user => {
       if (user) {
         user.authdata = window.btoa(email + ':' + password);
-        localStorage.setItem('currentUser', user);
+        localStorage.setItem('currentUser', JSON.stringify(user));
       }
     }));
   }

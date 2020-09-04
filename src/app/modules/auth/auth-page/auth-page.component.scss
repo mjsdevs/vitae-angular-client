@@ -1,0 +1,19 @@
+:host {
+  box-sizing: border-box;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.auth-form {
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-banner {
+  background-color: rgba(107, 62, 244, 1);
+  flex-grow: 1;
+}

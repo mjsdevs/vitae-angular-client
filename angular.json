@@ -8,8 +8,8 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss",
-          "inlineTemplate": true,
-          "skipTests": true
+          "inlineTemplate": false,
+          "skipTests": false
         }
       },
       "root": "",

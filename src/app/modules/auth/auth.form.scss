@@ -1,0 +1,12 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  > input {
+    box-sizing: border-box;
+    border-radius: 0;
+    padding: 1em;
+    border: 1px solid black;
+  }
+}
